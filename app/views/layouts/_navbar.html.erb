@@ -1,0 +1,15 @@
+<nav class="m-5 flex justify-between">
+  <div>
+    My blog
+  </div>
+
+  <div class="flex gap-5">
+    <% if current_user %>
+      <%= link_to "Edit Account", edit_user_registration_path, class: "text-red-500" %>
+    <% else %>
+      <%= link_to "Register", new_user_registration_path, class: "text-red-500" %>
+      <%= link_to "Login", new_user_session_path, class: "text-red-500" %>
+    <% end %>
+  </div>
+</nav>
+
