@@ -1,9 +1,14 @@
 class ArticlesController < ApplicationController
   def index
-    @articles = Article.all()
+    @articles = Article.all
   end
 
   def show
-    @article = Article.find(params[:id])
+    if user_signed_in?
+      @article = Article.find(params[:id])
+    else
+      flash[:notice] = "To access this route please log in !"
+      redirect_to ("/")
+    end
   end
 end
