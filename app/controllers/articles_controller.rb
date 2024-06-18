@@ -7,7 +7,7 @@ class ArticlesController < ApplicationController
     if user_signed_in?
       @article = Article.find(params[:id])
     else
-      flash[:notice] = "To access this route please log in !"
+      flash[:alert] = "To access this route please log in !"
       redirect_to ("/")
     end
   end
