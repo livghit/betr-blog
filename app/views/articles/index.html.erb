@@ -1,11 +1,13 @@
-<h1 style="">Articles</h1>
-
-<% @articles.each do |article| %>
-  <div>
-    <a href="/articles/<%= article.id %>">
-      <h1>
-        <%= article.title %>
-      </h1>
-    </a>
-  </div>
-<% end %>
+<div class="grid grid-cols-4 gap-5">
+  <% @articles.each do |article| %>
+    <div class="card w-96 bg-primary text-primary-content">
+      <div class="card-body">
+        <a href="/articles/<%= article.id %>" class="card-title">
+          <h1>
+            <%= article.title %>
+          </h1>
+        </a>
+      <div>
+    </div>
+  <% end %>
+<div>

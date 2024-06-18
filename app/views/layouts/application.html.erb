@@ -14,7 +14,10 @@
 </head>
 
 <body>
-    <%= render 'layouts/navbar' %>
+    <%- if devise_mapping.registerable? && controller_name != 'registrations'%>
+      <%= render 'layouts/navbar' %>
+    <% end %>
+
     <% if alert %>
       <div class="absolute bottom-5 right-5">
       <div role="alert" class="alert alert-error">
