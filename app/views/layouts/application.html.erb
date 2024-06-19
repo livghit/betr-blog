@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <%- if devise_mapping.registerable? && controller_name != 'registrations'%>
+    <%- if controller_name != 'registrations'%>
       <%= render 'layouts/navbar' %>
     <% end %>
 
